@@ -473,12 +473,13 @@ text-align:center;
     }
 	
 	  .ninja-button {
-            padding: 15px 50px;
+            padding: 10px 50px;
             text-transform: uppercase;
             background: #ff8e1a;
             border: 2px solid #000;
             font-weight: bold;
 			font-size:1.5vh;
+			height:20px:
             font-family:Arvo;
             cursor: pointer;
             transition: all .4s;
@@ -496,16 +497,10 @@ text-align:center;
 .tit{
 width:70vw;
   height:55vh;
+  float:left;
 
-
-  animation: mymove 3s;
-  animation-delay:6500ms;
 }
 
-@keyframes mymove {
- 0%{transform: translateY(100vh);}
-	100%{transform: translateY(0vh);}
-}
 
 .tit .career{
 
@@ -516,7 +511,15 @@ font-size:350%;
 color:#0e0e0d;
  padding-top:5vh;
  padding-left:15vw;
- text-decoration:underline
+ text-decoration:underline;
+ 
+  animation: mymove1 3s;
+  animation-delay:6500ms;
+}
+
+@keyframes mymove1 {
+ 0%{transform: translateX(-100vw);}
+	100%{transform: translateX(0vw);}
 
 }
 
@@ -530,7 +533,15 @@ color:#0e0e0d;
 
  padding-left:12vw;
   
+  animation: mymove 3s;
+  animation-delay:6500ms;
 }
+
+@keyframes mymove {
+ 0%{transform: translateY(100vh);}
+	100%{transform: translateY(0vh);}
+}
+
 
 
 #experience{
@@ -673,7 +684,7 @@ setTimeout(function(){
 <div class="tit">
 
 <p class="career">CAREER OBJECTIVE</p>
-<p class="careerd">Curious and empathetic recent graduate with an experience as a graphic designer. Looking to join a place to gaun the essential knowledge and skills to design and give back great outputs that adds value. Equipped with astute observational capabailities and the ability to challenge design problems with a structures design process.</p>
+<p class="careerd">Curious and empathetic recent graduate with an experience as a graphic designer. Looking to join a place to gain the essential knowledge and skills to design and give back great outputs that adds value. Equipped with astute observational capabailities and the ability to challenge design problems with a structures design process.</p>
 
 </div>
 
