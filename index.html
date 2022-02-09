@@ -496,6 +496,59 @@ text-align:center;
             }
   
  
+ /* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
 
 
 .tit{
@@ -639,7 +692,11 @@ text-align:left;
 }
 
 
+#skills{
 
+height:100vh;
+padding:5vh;
+}
 
 
 
@@ -686,6 +743,15 @@ setTimeout(function(){
 }, 2000);
 
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+ 
+}
 
 </script>
 
@@ -728,7 +794,7 @@ setTimeout(function(){
 <div class="nav">
 <p><a href="#home">HOME</a></p>
 <p><a href="#experience">EXPERIENCE</a></p>
-<p><a href="#">SKILLS</a></p>
+<p><a href="#skills">SKILLS</a></p>
 <p><a href="#">PROJECTS</a></p>
 <p><a href="#">CERTIFICATIONS</a></p>
 
@@ -738,17 +804,33 @@ setTimeout(function(){
 
 <div class="welcome">
 
-<div class="polaroid">
-<img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FScreenshot_20210414-231449.jpg?alt=media&token=f5fa4322-4ced-4767-b3eb-ea888b5dc49d">
-<p class="p">ASHIKA RAMESH
+<div class="polaroid" id="polaroid">
+<img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FScreenshot_20210414-231449.jpg?alt=media&token=f5fa4322-4ced-4767-b3eb-ea888b5dc49d" id="polaroid1">
+<p class="p" id="polaroid2">ASHIKA RAMESH
 <br><span>GRAPHIC DESIGNER</span>
 
 
 <div class="button-wrapper">
-      <button class="ninja-button"  >CONTACT ME</button>
+      <button class="ninja-button"  onclick="openForm()" >CONTACT ME</button>
+	  
+
+
     </div>
 
 </p>
+
+	  <div class="form-popup" id="myForm">
+  <form class="form-container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 
 <!-- <a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fgmail.png?alt=media&token=fda3a6f2-64bc-4815-89bc-fe7b115fe046" ></a>
 <a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fsmartphone.png?alt=media&token=0955a8a3-a6b1-4f7b-9e23-5baa4d8efeb9" ></a>
@@ -816,6 +898,12 @@ setTimeout(function(){
 
 
 
+</div>
+
+
+
+
+<div id="skills">
 </div>
 
 </div>
