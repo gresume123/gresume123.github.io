@@ -494,25 +494,20 @@ text-align:center;
 
 
 .tit{
-
-
 width:70vw;
-
-
-
-
   height:55vh;
- 
-  float:left;
 
-              
-  
+
+  animation: mymove 3s;
+  animation-delay:6500ms;
+}
+
+@keyframes mymove {
+ 0%{transform: translateY(100vh);}
+	100%{transform: translateY(0vh);}
 }
 
 .tit .career{
-
-
-
 
 text-align:center;
 font-size:350%;
@@ -523,18 +518,9 @@ color:#0e0e0d;
  padding-left:15vw;
  text-decoration:underline
 
- top:50%;
- left:50%; 
-
-
-              
-  
 }
 
 .tit .careerd{
-
-
-
 
 text-align:left;
 font-size:180%;
@@ -543,13 +529,6 @@ font-size:180%;
 color:#0e0e0d;
 
  padding-left:12vw;
- 
-
-
-
-
-
-              
   
 }
 
@@ -561,6 +540,7 @@ padding:2vh;
 }
 
 #experience .he{
+margin-top:10%;
 font-size:350%;
 	font-family:Bebas Neue;
 	font-weight:bold;
@@ -703,7 +683,7 @@ setTimeout(function(){
 
 
 <div id="experience">
-<p class="he">CAREER OBJECTIVE</p>
+
 </div>
 
 
