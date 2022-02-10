@@ -501,15 +501,18 @@ text-align:center;
   display: none;
   position: fixed;
   bottom: 0;
-  right: 15px;
-  z-index: 9;
+  right: 35vw;
+  z-index: 850;
 }
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 30vw;
+  font-family:Arvo;
+	font-weight:bold;
+  color:#f5deb3;
   padding: 10px;
-  background-color: white;
+  background-color: #202020;
 }
 
 /* Full-width input fields */
@@ -518,6 +521,19 @@ text-align:center;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
+  font-family:Poppins;
+  font-weight:bold;
+  background: #f1f1f1;
+}
+
+.form-container textarea{
+width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  font-family:Poppins;
+  font-weight:bold;
+  resize:none;
   background: #f1f1f1;
 }
 
@@ -525,28 +541,39 @@ text-align:center;
 .form-container input[type=text]:focus, .form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
+  
+}
+
+.form-container textarea:focus {
+background-color: #ddd;
+  outline: none;
 }
 
 /* Set a style for the submit/login button */
 .form-container .btn {
-  background-color: #04AA6D;
+  background-color: #ff8e1a;
   color: white;
+  font-family:Arvo;
+	font-weight:bold;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   width: 100%;
   margin-bottom:10px;
-  opacity: 0.8;
+  color:#000;
+  border: 2px solid #000;
 }
 
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
+  color:#000;
+  border: 2px solid #000;
 }
 
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 
@@ -745,12 +772,27 @@ setTimeout(function(){
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
+  document.getElementById("home").style.opacity = "0.5";
+  document.getElementById("home").style.background = "grey";
+  document.getElementById("home").style.transition = "0.5s";
+  
+
+  
 
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
- 
+  document.getElementById("home").style.opacity = "1";
+  document.getElementById("home").style.background = "#f5deb3";
+  document.getElementById("home").style.transition = "0.5s";
+}
+
+function submitForm() {
+  document.getElementById("myForm").style.display = "none";
+  document.getElementById("home").style.opacity = "1";
+  document.getElementById("home").style.background = "#f5deb3";
+  document.getElementById("home").style.transition = "0.5s";
 }
 
 </script>
@@ -819,18 +861,7 @@ function closeForm() {
 
 </p>
 
-	  <div class="form-popup" id="myForm">
-  <form class="form-container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
 
 <!-- <a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fgmail.png?alt=media&token=fda3a6f2-64bc-4815-89bc-fe7b115fe046" ></a>
 <a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fsmartphone.png?alt=media&token=0955a8a3-a6b1-4f7b-9e23-5baa4d8efeb9" ></a>
@@ -908,6 +939,24 @@ function closeForm() {
 
 </div>
 
+	  <div class="form-popup" id="myForm">
+  <form class="form-container" >
+  <label><b>CONTACT ME ON</b></label>
+  <input id="nm" type="text" placeholder="Enter Name / Organization Name" name="name" required>
+  
+  <label for="name"><b>Name</b></label>
+    <input id="nm" type="text" placeholder="Enter Name / Organization Name" name="name" required>
+	
+    <label for="email"><b>Email</b></label>
+    <input id="em" type="text" placeholder="Enter Email" name="email" required>
+	
+	<label for="msg"><b>Message</b></label>
+	<textarea id="msg" name="w3review" placeholder="Enter your Message" rows="4" cols="50"></textarea>
+
+    <button onClick="submitForm()" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
 
 
 
@@ -919,85 +968,4 @@ function closeForm() {
 
 
 
-
-
-
-
-<!-- 
-<div class="cartoon">
-  
-  
-  <div class="bubble b r hb">Hello...<br/>I guess...</div>
-</div>
- -->
-
-
-
-
-
-
-
-.cartoon {
-  position: absolute;
-  top: 50vh;
-  left: 50%;
-  transform: translate(-70%, -50%);
-  width: 80vmin;
-  height: 80vmin;
-}
-
-
-.cartoon div {
-  position: absolute;
-  box-sizing: border-box;
-}
-
-.b {
-  border: 0.5vmin solid black;
-}
-
-.r {
-  border-radius: 100%;
-}
-
-.hb::before,
-.ha::after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-
-/****/
-.cartoon {
-  --skin: #fca;
-  --cheek: rgba(200, 0, 0, 0.15);
-  --hair: #631;
-  --shirt: #fff;
-}
-
-
-.bubble {
-  width: 40%;
-  height: 25%;
-  left: 73%;
-  top: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 5vmin;
-  background: #ffd;
-  box-shadow: 0 -0.25vmin, 0 0.125vmin;
-  font-family: "Comic Sans", "Comic Neue", sans-serif;
-}
-
-.bubble::before {
-  width: 40%;
-  height: 100%;
-  bottom: -51%;
-  border-radius: 50%;
-  left: 10%;
-  box-shadow: 0.5vmin 0, 2vmin -0.5vmin #ffd, 2vmin -0.5vmin 0 0.5vmin;
-  clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
-}
 
