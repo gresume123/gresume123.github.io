@@ -687,7 +687,7 @@ border-radius: 25px;
 }
 
 .office{
-width:50%:
+width:30vw:
 padding:1vh;
 border-radius:25px;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -745,7 +745,6 @@ text-align:left;
 
 #skills{
  clear: left;
-height:50vh;
 padding:5vh;
 }
 
@@ -785,6 +784,11 @@ transform: translateY(6px);
 padding-right:5px;
 }
 
+.lang img:hover{
+transform:scale(4);
+transition:1s;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -792,12 +796,32 @@ padding-right:5px;
   clear: both;
 }
 
+#myProgress {
+  width: 30%;
+  background-color: white;
+  border-radius:25px;
+}
+
+#myBar {
+  
+  height: 10px;
+  text-align:center;
+  background-color: black;
+  border-radius:25px;
+}
+
+
+
 
 </style>
 
 
 </head>
 <body id="body">
+
+<script src=
+"https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+    </script>
 
 <script>
 
@@ -834,6 +858,22 @@ setTimeout(function(){
 
     
 }, 2000);
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCHfQTcQSNDpv6XyVLhQj7TeTfNa9BuOEo",
+  authDomain: "login-d9067.firebaseapp.com",
+  databaseURL: "https://login-d9067.firebaseio.com",
+  projectId: "login-d9067",
+  storageBucket: "login-d9067.appspot.com",
+  messagingSenderId: "184038142241",
+  appId: "1:184038142241:web:c81cd00b4653b2204e0e60",
+  measurementId: "G-J7T8BLT4JX"
+};
+
+firebase.initializeApp(firebaseConfig);
+ 
+        var messagesRef = firebase.firestore()
+            .ref('Messages');
 
 
 function openForm() {
@@ -1008,9 +1048,13 @@ function submitForm() {
   <div class="column">
     <p class="hs" >Softwares</p>
      <p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fadobe-illustrator.png?alt=media&token=f7b30d82-7cde-47be-9adc-8b75772db307"> Adobe Illustrator</p>
+	 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fadobe-photoshop.png?alt=media&token=b502c010-2b68-4dad-8d7d-04c9d5b7ee56"> Adobe Photoshop</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fa fa-star-half-alt" ></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fadobe-indesign.png?alt=media&token=d01fc975-3572-483d-a46f-b7a5799c3ce7"> Adobe InDesign</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fexperience.png?alt=media&token=b6833e15-40d3-4904-a5dc-8643529fd454"> Adobe Xd</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fa fa-star-half-alt" ></i><i class="far fa-star"></i>
   </div>
   <div class="column">
     <p class="hs" >Technical Skills</p>
@@ -1025,16 +1069,37 @@ function submitForm() {
   <div class="column">
     <p class="hs" >Languages</p>
     <p class="lang">English</p>
+	       <div id="myProgress">
+                  <div id="myBar" style="width: 80%;"></div>
+              </div>
 	<p class="lang">Hindi</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 60%;"></div>
+              </div>
 	<p class="lang">Tamil</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 90%;"></div>
+              </div>
 
   </div>
   <div class="column">
     <p class="hs" >Other Skills</p>
 	<p class="lang">Collaboration/Teamwork</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 100%;"></div>
+              </div>
 	<p class="lang">Problem-Solving</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 70%;"></div>
+              </div>
 	<p class="lang">Willingness to Learn</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 80%;"></div>
+              </div>
 	<p class="lang">Interpersonal Communication Skills</p>
+	<div id="myProgress">
+                  <div id="myBar" style="width: 90%;"></div>
+              </div>
   </div>
 </div>
 
