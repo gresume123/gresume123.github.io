@@ -324,7 +324,7 @@ left:25%;
 position: absolute;
 top: 0;
 left:0;
-height:600vh;
+
 width:100%;
 background:#f5deb3;
  z-index: 800;
@@ -811,6 +811,58 @@ transition:1s;
 }
 
 
+#certificates{
+clear:left;
+padding:5vh;
+}
+
+#certificates .hc{
+
+
+  text-decoration:underline;
+font-size:350%;
+text-align:center;
+	font-family:Bebas Neue;
+	font-weight:bold;
+
+	
+	
+}
+
+
+#certificates .cer-box{
+
+float:left;
+padding-left:5vh;
+padding-right:5vh;
+padding-top:1vh;
+padding-down:1vh;
+border-radius: 25px;
+
+
+
+}
+
+#certificates .cer{
+
+height:300px;
+width:500px;
+padding:2vh;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+background:black;
+
+
+}
+#certificates .cer .cer1{
+
+height:100%;
+background:white;
+
+
+}
+
+
+
 
 
 </style>
@@ -872,8 +924,6 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
  
-        var messagesRef = firebase.firestore()
-            .ref('Messages');
 
 
 function openForm() {
@@ -895,6 +945,8 @@ function closeForm() {
 }
 
 function submitForm() {
+
+
   document.getElementById("myForm").style.display = "none";
   document.getElementById("home").style.opacity = "1";
   document.getElementById("home").style.background = "#f5deb3";
@@ -944,7 +996,7 @@ function submitForm() {
 <p><a href="#experience">EXPERIENCE</a></p>
 <p><a href="#skills">SKILLS</a></p>
 <p><a href="#">PROJECTS</a></p>
-<p><a href="#">CERTIFICATIONS</a></p>
+<p><a href="#certificates">CERTIFICATIONS</a></p>
 
 
 
@@ -1059,10 +1111,15 @@ function submitForm() {
   <div class="column">
     <p class="hs" >Technical Skills</p>
     <p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fpaintbrush.png?alt=media&token=03da208c-b90c-4170-8f1f-db530c79da9f"> Illustration</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fdata-research.png?alt=media&token=a2c91bed-e410-47ec-a8af-a8ec81e565a6"> User Research</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fmoney-graph-with-up-arrow.png?alt=media&token=74e0f886-7ffa-4e3f-85d0-e236ca23d56e"> Trend Forecast Study</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fgraphics-layouts.png?alt=media&token=894e725d-1688-4f20-8680-e9dce4f1b7b1"> Layout Design</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Ffont.png?alt=media&token=7c2a8436-33a1-4604-abbc-a9535c2c9fc6"> Typography</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
   </div>
 </div>
 <div class="row">
@@ -1103,6 +1160,38 @@ function submitForm() {
   </div>
 </div>
 
+
+</div>
+
+
+<div id="certificates">
+
+<p class="hc" >CERTIFICATIONS</p>
+
+<div class="cer-box">
+<div class="cer">
+<div class="cer1">
+
+</div>
+</div>
+</div>
+
+
+<div class="cer-box">
+<div class="cer">
+<div class="cer1">
+
+</div>
+</div>
+</div>
+
+<div class="cer-box">
+<div class="cer">
+<div class="cer1">
+
+</div>
+</div>
+</div>
 
 </div>
 
