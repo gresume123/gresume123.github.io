@@ -744,11 +744,47 @@ text-align:left;
 
 
 #skills{
-
-height:100vh;
+ clear: left;
+height:50vh;
 padding:5vh;
 }
 
+#skills .hs{
+
+
+  text-decoration:underline;
+font-size:250%;
+
+	font-family:Bebas Neue;
+	font-weight:bold;
+
+	
+	
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+
+}
+
+.lang{
+font-family:Arvo;
+font-weight:bold;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
 </style>
@@ -959,6 +995,25 @@ function submitForm() {
 
 
 <div id="skills">
+
+
+
+<div class="row">
+  <div class="column">
+    <p class="hs" >Technical Skills</p>
+     <p class="lang">Adobe Creative Suit(inc. Photoshop,Illustrator & InDesign)</p>
+	<p class="lang">Problem Solving & Willingess to Learn</p>
+	<p class="lang">Interpersonal communication skills</p>
+  </div>
+  <div class="column">
+    <p class="hs" >Languages</p>
+    <p class="lang">English</p>
+	<p class="lang">Hindi</p>
+	<p class="lang">Tamil</p>
+  </div>
+</div>
+
+
 </div>
 
 </div>
