@@ -500,7 +500,7 @@ text-align:center;
 .form-popup {
   display: none;
   position: fixed;
-  bottom: 0;
+  top:5vh;
   right: 35vw;
   z-index: 850;
 }
@@ -508,6 +508,8 @@ text-align:center;
 /* Add styles to the form container */
 .form-container {
   max-width: 30vw;
+  max-height: 93vh;
+  overflow: auto;
   font-family:Arvo;
 	font-weight:bold;
   color:#f5deb3;
@@ -941,6 +943,7 @@ function submitForm() {
 
 	  <div class="form-popup" id="myForm">
   <form class="form-container" >
+  
   <label><b>CONTACT ME ON</b></label>
   <input id="nm" type="text" placeholder="Enter Name / Organization Name" name="name" required>
   
