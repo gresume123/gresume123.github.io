@@ -841,6 +841,7 @@ padding-right:5vh;
 padding-top:1vh;
 padding-down:1vh;
 border-radius: 25px;
+transform:translateX(100px);
 
 
 
@@ -849,7 +850,7 @@ border-radius: 25px;
 #certificates .cer{
 
 height:300px;
-width:500px;
+width:400px;
 padding:2vh;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 background:black;
@@ -861,10 +862,17 @@ background:black;
 height:100%;
 background:white;
 
+outline: 2px solid black;
+  outline-offset: -10px;
+
 
 }
 
-
+#end{
+clear:left;
+height:15vh;
+padding:5v;
+}
 
 
 
@@ -1129,37 +1137,23 @@ function submitForm() {
   <div class="column">
     <p class="hs" >Languages</p>
     <p class="lang">English</p>
-	       <div id="myProgress">
-                  <div id="myBar" style="width: 80%;"></div>
-              </div>
+	     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
 	<p class="lang">Hindi</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 60%;"></div>
-              </div>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang">Tamil</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 90%;"></div>
-              </div>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 
   </div>
   <div class="column">
     <p class="hs" >Other Skills</p>
 	<p class="lang">Collaboration/Teamwork</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 100%;"></div>
-              </div>
+		<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang">Problem-Solving</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 70%;"></div>
-              </div>
+		<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang">Willingness to Learn</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 80%;"></div>
-              </div>
+		<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
 	<p class="lang">Interpersonal Communication Skills</p>
-	<div id="myProgress">
-                  <div id="myBar" style="width: 90%;"></div>
-              </div>
+		<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
   </div>
 </div>
 
@@ -1196,12 +1190,34 @@ function submitForm() {
 </div>
 </div>
 
+
+<div class="cer-box">
+<div class="cer">
+<div class="cer1">
+
+</div>
+</div>
+</div>
+
+<div class="cer-box">
+<div class="cer">
+<div class="cer1">
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div id="end">
+
 </div>
 
 </div>
 
 	  <div class="form-popup" id="myForm">
-  <form class="form-container" >
+  <div class="form-container" >
   
   <label><b>CONTACT ME ON</b></label>
     <div class="contacts">
@@ -1210,18 +1226,18 @@ function submitForm() {
 	<a href="#" target="_blank"><i class="fas fa-phone"></i>   +91-9176022852</a><br>
 	<a href="https://www.behance.net/ashikarame" target="_blank"><i class="fa fa-behance"></i>   ashikarame</a></div>
   
-  <label for="name"><b>Name</b></label>
+  <label ><b>Name</b></label>
     <input id="nm" type="text" placeholder="Enter Name / Organization Name" name="name" required>
 	
-    <label for="email"><b>Email</b></label>
+    <label ><b>Email</b></label>
     <input id="em" type="text" placeholder="Enter Email" name="email" required>
 	
-	<label for="msg"><b>Message</b></label>
+	<label ><b>Message</b></label>
 	<textarea id="msg" name="w3review" placeholder="Enter your Message" rows="4" cols="50"></textarea>
 
     <button onClick="submitForm()" class="btn">Send</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
+  </div>
 </div>
 
 
