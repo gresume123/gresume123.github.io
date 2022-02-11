@@ -690,7 +690,7 @@ transform:translateX(25px);
 .office{
 width:35vw:
 padding:1vh;
-  background-color: #FFBF00;
+  background-color: #ff8e1a;
   border:3px solid black;
 
 border-radius:25px;
@@ -717,7 +717,9 @@ color:#0e0e0d;
 font-family:Poppins;
 font-weight: bold;
 text-align:left;
- padding:2vh;
+ padding:1vh;
+ width:300px;
+ height:150px;
 
 
 }
@@ -737,7 +739,7 @@ text-align:left;
 .office .oh .span2{
 
 font-size:100%;
-color:grey;
+color:#0000E7;
 font-family:Poppins;
 font-weight: normal;
 text-align:left;
@@ -896,7 +898,7 @@ padding:5v;
 <script src=
 "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
     </script>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
  setTimeout(function(){
@@ -974,7 +976,40 @@ document.getElementById("nm").value = "";
 
 function submitForm() {
 
-  document.getElementById("nm").value = "";
+var nm=document.getElementById("nm").value.trim();
+var em=document.getElementById("em").value.trim();
+var msg=document.getElementById("msg").value.trim();
+
+if(nm.length>=1 && em.length>=1 && msg.length>=1)
+{ 
+    if(nm.length>=2)
+	
+	{
+	  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(em))
+	  
+	  { 
+	  let res1 = nm.replace(/-/g, " ");
+	  let res = msg.replace(/-/g, ":");
+	  var z=res1+"-"+em+"-"+res;
+	  
+	  
+	  const Http = new XMLHttpRequest();
+var url='https://us-central1-srm-guru.cloudfunctions.net/sendMail?dest=';
+url=url+z;
+console.log(z);
+console.log(url);
+
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText);
+  
+  
+  if(Http.responseText=='Sended')
+  
+  {
+   document.getElementById("nm").value = "";
   document.getElementById("em").value = "";
   document.getElementById("msg").value = "";
 
@@ -982,6 +1017,77 @@ function submitForm() {
   document.getElementById("home").style.opacity = "1";
   document.getElementById("home").style.background = "#f5deb3";
   document.getElementById("home").style.transition = "0.5s";
+  
+   Swal.fire({
+  title: "<b>MESSAGE SENT SUCCESFULLY</b", 
+  html: "I will get back to you within 24 hours!!!",  
+  confirmButtonText: "Ok", 
+});
+
+  }
+  
+  
+  else
+  {
+   Swal.fire({
+  title: "<b>ERROR</b", 
+  html: "Message wasn't sent.Try again in sometime.",  
+  confirmButtonText: "Ok", 
+});
+  }
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
+	  
+	  
+	  
+	  
+	 
+  }
+  
+  else
+  
+  {
+  
+  
+    Swal.fire({
+  title: "<b>ERROR</b", 
+  html: "Email Address entered is invalid. Email ID should be of the format \n <b>name@company.com</b>",  
+  confirmButtonText: "Ok", 
+});
+  
+  }
+	
+	}
+	
+	else
+	{
+	
+	  Swal.fire({
+  title: "<b>ERROR</b", 
+  html: "<b>Name</b> must be of minimum 2 characters. If your name has less than 2 characters please add the underscore symbol (_) before your name.\nEg: _X",  
+  confirmButtonText: "Ok", 
+});
+	
+	}
+
+  }
+ else
+  {
+  Swal.fire({
+  title: "<b>ERROR</b", 
+  html: "Fields can't be empty",  
+  confirmButtonText: "Ok", 
+});
+  }
 }
 
 </script>
@@ -1051,11 +1157,6 @@ function submitForm() {
 
 </p>
 
-
-
-<!-- <a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fgmail.png?alt=media&token=fda3a6f2-64bc-4815-89bc-fe7b115fe046" ></a>
-<a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fsmartphone.png?alt=media&token=0955a8a3-a6b1-4f7b-9e23-5baa4d8efeb9" ></a>
-<a class="p1" href="#"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Flinkedin.png?alt=media&token=8976600a-78f5-4b5c-ae57-204c1cfa47b9" ></a> -->
 </div>
 
 
@@ -1141,6 +1242,18 @@ function submitForm() {
 	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fa fa-star-half-alt" ></i><i class="far fa-star"></i>
   </div>
   <div class="column">
+       <p class="hs" >Languages</p>
+    <p class="lang">English</p>
+	     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+	<p class="lang">Hindi</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+	<p class="lang">Tamil</p>
+	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+    
+  </div>
+</div>
+<div class="row">
+  <div class="column">
     <p class="hs" >Technical Skills</p>
     <p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Fpaintbrush.png?alt=media&token=03da208c-b90c-4170-8f1f-db530c79da9f"> Illustration</p>
 	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
@@ -1152,17 +1265,6 @@ function submitForm() {
 	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 	<p class="lang"><img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2Ffont.png?alt=media&token=7c2a8436-33a1-4604-abbc-a9535c2c9fc6"> Typography</p>
 	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-  </div>
-</div>
-<div class="row">
-  <div class="column">
-    <p class="hs" >Languages</p>
-    <p class="lang">English</p>
-	     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-	<p class="lang">Hindi</p>
-	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-	<p class="lang">Tamil</p>
-	<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
 
   </div>
   <div class="column">
@@ -1211,7 +1313,7 @@ function submitForm() {
 
 <div class="cer-box" >
 <div class="cer">
-<div class="cer1" onClick="window.open('https://learndigital.withgoogle.com/digitalunlocked/validate-certificate-code', '_blank');">
+<div class="cer1" onClick="navigator.clipboard.writeText('7GQ EJ3 94A');alert('Copied the Credential to Clipboard\nPress Ok within 5 seconds to verify certificate');window.open('https://learndigital.withgoogle.com/digitalunlocked/validate-certificate-code', '_blank');">
 <p class="certit">Fundamentals of Digital Marketing</p>
 <p class="certit" style="font-weight:normal;">Google Digital Garage</p>
 <p class="certit" style="font-weight:normal;color:grey;">May 23, 2020</p>
