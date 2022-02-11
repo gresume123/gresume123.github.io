@@ -655,13 +655,13 @@ color:#0e0e0d;
 
 
 #experience{
-
+ clear: left;
 height:100vh;
 padding:5vh;
 }
 
-#experience .he{
- clear: left;
+.he{
+
 
   text-decoration:underline;
 font-size:350%;
@@ -710,21 +710,25 @@ transform:scale(1.2);
 
 
 
-.office .oh{
+ .oh{
 
 font-size:150%;
 color:#0e0e0d;
 font-family:Poppins;
 font-weight: bold;
 text-align:left;
- padding:1vh;
+ padding-left:1vh;
+ padding-right:1vh;
+ padding-top:0.5vh;
+ padding-bottom:0.5vh;
  width:300px;
  height:150px;
+ 
 
 
 }
 
-.office .oh .span1{
+ .oh .span1{
 
 font-size:100%;
 color:#0e0e0d;
@@ -736,7 +740,7 @@ text-align:left;
 
 }
 
-.office .oh .span2{
+ .oh .span2{
 
 font-size:100%;
 color:#0000E7;
@@ -879,6 +883,17 @@ outline: 2px solid black;
 background:#f5deb3;
 cursor:pointer;
 transition:1s;
+}
+
+
+#volunteer{
+clear:left;
+padding:5vh;
+}
+
+#education{
+clear:left;
+padding:5vh;
 }
 
 #end{
@@ -1134,6 +1149,8 @@ Http.onreadystatechange = (e) => {
 <p><a href="#skills">SKILLS</a></p>
 <p><a href="#">PROJECTS</a></p>
 <p><a href="#certificates">CERTIFICATIONS</a></p>
+<p><a href="#volunteer">VOLUNTEER</a></p>
+<p><a href="#education">EDUCATION</a></p>
 <p><a href="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FAshika%20Ramesh%20-%20Job%20Resume%20.pdf?alt=media&token=b9ad53eb-701e-448b-91ff-b4eac81986ab" target="_blank">RESUME</a></p>
 
 
@@ -1347,6 +1364,33 @@ Http.onreadystatechange = (e) => {
 
 </div>
 
+
+<div id="volunteer">
+
+<p class="he" id="test">VOLUNTEER</p>
+
+<div class="office-box">
+<div class="office">
+<p class="oh" style="transform:translateY(-20px);">Bhumi - Internship<br><span class="span1">Managing CSR events for various companies</span><br>
+<span class="span2">Jun 2018 - Jul 2018</span></p>
+</div>
+</div>
+
+<div class="office-box">
+<div class="office">
+<p class="oh" style="transform:translateY(-10px);">ALERT<br><span class="span1">First AID volunteer</span><br>
+<span class="span2">Sep 2018 - Present</span></p>
+</div>
+</div>
+
+<div class="office-box">
+<div class="office">
+<p class="oh" style="transform:translateY(-10px);">Start India Foundation<br><span class="span1">Community Mural</span><br>
+<span class="span2">Feb 2020</span></p>
+</div>
+</div>
+
+</div>
 
 <div id="end">
 
