@@ -397,7 +397,7 @@ text-align:center;
   height:55vh;
   padding:2vh;
   float:left;
-  
+  transform:translateX(15px);
  
      animation-name: example1;
   animation-duration: 8s;
@@ -842,8 +842,8 @@ padding-right:5vh;
 padding-top:1vh;
 padding-bottom:2vh;
 border-radius: 25px;
-transform:translateX(100px);
-cursor:pointer;
+transform:translateX(50px);
+
 
 
 
@@ -852,7 +852,7 @@ cursor:pointer;
 #certificates .cer{
 
 height:300px;
-width:400px;
+width:450px;
 padding:2vh;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 background:black;
@@ -868,8 +868,15 @@ font-weight:bold;
 padding:2vh;
 outline: 2px solid black;
   outline-offset: -10px;
+  
 
 
+}
+
+#certificates .cer .cer1:hover{
+background:#f5deb3;
+cursor:pointer;
+transition:1s;
 }
 
 #end{
@@ -1179,9 +1186,9 @@ function submitForm() {
 
 <p class="hc" >CERTIFICATIONS</p>
 
-<div class="cer-box" onClick="window.open('https://www.coursera.org/account/accomplishments/specialization/3S2KLU7MXN9Y', '_blank');">
+<div class="cer-box" >
 <div class="cer">
-<div class="cer1">
+<div class="cer1" onClick="window.open('https://www.coursera.org/account/accomplishments/specialization/3S2KLU7MXN9Y', '_blank');">
 <p class="certit">UI/UX Design Specialization</p>
 <p class="certit" style="font-weight:normal;">CALARTS(Coursera)</p>
 <p class="certit" style="font-weight:normal;color:grey;">November 29, 2020</p>
@@ -1191,9 +1198,9 @@ function submitForm() {
 </div>
 
 
-<div class="cer-box" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/MPKPMBVH2GHB', '_blank');">
+<div class="cer-box" >
 <div class="cer">
-<div class="cer1">
+<div class="cer1" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/MPKPMBVH2GHB', '_blank');">
 <p class="certit">Introduction to Typography</p>
 <p class="certit" style="font-weight:normal;">CALARTS(Coursera)</p>
 <p class="certit" style="font-weight:normal;color:grey;">July 27, 2020</p>
@@ -1202,9 +1209,9 @@ function submitForm() {
 </div>
 </div>
 
-<div class="cer-box" onClick="window.open('https://learndigital.withgoogle.com/digitalunlocked/validate-certificate-code', '_blank');">
+<div class="cer-box" >
 <div class="cer">
-<div class="cer1">
+<div class="cer1" onClick="window.open('https://learndigital.withgoogle.com/digitalunlocked/validate-certificate-code', '_blank');">
 <p class="certit">Fundamentals of Digital Marketing</p>
 <p class="certit" style="font-weight:normal;">Google Digital Garage</p>
 <p class="certit" style="font-weight:normal;color:grey;">May 23, 2020</p>
@@ -1214,9 +1221,9 @@ function submitForm() {
 </div>
 
 
-<div class="cer-box" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/9LK2JV7TFJ4L', '_blank');">
+<div class="cer-box" >
 <div class="cer">
-<div class="cer1">
+<div class="cer1" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/9LK2JV7TFJ4L', '_blank');">
 <p class="certit">Psychological First Aid</p>
 <p class="certit" style="font-weight:normal;">Johns Hopkins University(Coursera)</p>
 <p class="certit" style="font-weight:normal;color:grey;">April 30, 2020</p>
@@ -1225,9 +1232,9 @@ function submitForm() {
 </div>
 </div>
 
-<div class="cer-box" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/4HM8595QE2CH', '_blank');">
+<div class="cer-box">
 <div class="cer">
-<div class="cer1">
+<div class="cer1" onClick="window.open('https://www.coursera.org/account/accomplishments/verify/4HM8595QE2CH', '_blank');">
 <p class="certit">Introduction to Psychology</p>
 <p class="certit" style="font-weight:normal;">Yale University(Coursera)</p>
 <p class="certit" style="font-weight:normal;color:grey;">September 5, 2020</p>
