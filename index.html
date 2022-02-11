@@ -840,7 +840,7 @@ float:left;
 padding-left:5vh;
 padding-right:5vh;
 padding-top:1vh;
-padding-down:1vh;
+padding-bottom:2vh;
 border-radius: 25px;
 transform:translateX(100px);
 cursor:pointer;
@@ -954,9 +954,9 @@ function openForm() {
 
 function closeForm() {
 
-document.getElementById("nm").innerHTML.value = "";
-  document.getElementById("em").innerHTML.value = "";
-  document.getElementById("msg").innerHTML.value = "";
+document.getElementById("nm").value = "";
+  document.getElementById("em").value = "";
+  document.getElementById("msg").value = "";
   
   
   document.getElementById("myForm").style.display = "none";
@@ -967,9 +967,9 @@ document.getElementById("nm").innerHTML.value = "";
 
 function submitForm() {
 
-  document.getElementById("nm").innerHTML.value = "";
-  document.getElementById("em").innerHTML.value = "";
-  document.getElementById("msg").innerHTML.value = "";
+  document.getElementById("nm").value = "";
+  document.getElementById("em").value = "";
+  document.getElementById("msg").value = "";
 
   document.getElementById("myForm").style.display = "none";
   document.getElementById("home").style.opacity = "1";
@@ -1183,6 +1183,8 @@ function submitForm() {
 <div class="cer">
 <div class="cer1">
 <p class="certit">UI/UX Design Specialization</p>
+<p class="certit" style="font-weight:normal;">CALARTS(Coursera)</p>
+<p class="certit" style="font-weight:normal;color:grey;">November 29, 2020</p>
 </div>
 </div>
 </div>
@@ -1192,6 +1194,8 @@ function submitForm() {
 <div class="cer">
 <div class="cer1">
 <p class="certit">Introduction to Typography</p>
+<p class="certit" style="font-weight:normal;">CALARTS(Coursera)</p>
+<p class="certit" style="font-weight:normal;color:grey;">July 27, 2020</p>
 </div>
 </div>
 </div>
@@ -1200,6 +1204,8 @@ function submitForm() {
 <div class="cer">
 <div class="cer1">
 <p class="certit">Fundamentals of Digital Marketing</p>
+<p class="certit" style="font-weight:normal;">Google Digital Garage</p>
+<p class="certit" style="font-weight:normal;color:grey;">May 23, 2020</p>
 </div>
 </div>
 </div>
@@ -1209,6 +1215,8 @@ function submitForm() {
 <div class="cer">
 <div class="cer1">
 <p class="certit">Psychological First Aid</p>
+<p class="certit" style="font-weight:normal;">Johns Hopkins University(Coursera)</p>
+<p class="certit" style="font-weight:normal;color:grey;">April 30, 2020</p>
 </div>
 </div>
 </div>
@@ -1217,6 +1225,8 @@ function submitForm() {
 <div class="cer">
 <div class="cer1">
 <p class="certit">Introduction to Psychology</p>
+<p class="certit" style="font-weight:normal;">Yale University(Coursera)</p>
+<p class="certit" style="font-weight:normal;color:grey;">September 5, 2020</p>
 </div>
 </div>
 </div>
@@ -1237,8 +1247,10 @@ function submitForm() {
     <div class="contacts">
 	<a href="https://www.linkedin.com/in/ashika-ramesh9/" target="_blank"><i class="fab fa-linkedin"></i>   ashika-ramesh9</a><br>
 	<a  href="mailto:ashika.rameshk@gmail.com" target="_blank"><i class="fas fa-envelope"></i>   ashika.rameshk@gmail.com</a><br>
-	<a href="#" target="_blank"><i class="fas fa-phone"></i>   +91-9176022852</a><br>
-	<a href="https://www.behance.net/ashikarame" target="_blank"><i class="fa fa-behance"></i>   ashikarame</a></div>
+	<a href="https://www.behance.net/ashikarame" target="_blank"><i class="fa fa-behance"></i>   ashikarame</a><br>
+	<a href="https://www.instagram.com/tinte.it/" target="_blank"><i class="fa fa-instagram"></i>   tinte.it</a><br>
+		<a  target="_blank"><i class="fas fa-phone"></i>   +91-9176022852</a><br>
+		<a  target="_blank"><i class="fas fa-home"></i>   Chennai,India 600122</a></div>
   
   <label ><b>Name</b></label>
     <input id="nm" type="text" placeholder="Enter Name / Organization Name" name="name" required>
