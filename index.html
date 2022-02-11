@@ -418,16 +418,53 @@ text-align:center;
   
   
   
-  .polaroid img {
+  .polaroid .img {
   
   height:70%;
   width:100%;
    border-radius: 10px;
+   
+   background-image:url('https://imgur.com/llF5iyg.gif');
+    background-repeat: no-repeat;
+  background-size: 100px 100px;
+  content:url("https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FScreenshot_20210414-231449.jpg?alt=media&token=f5fa4322-4ced-4767-b3eb-ea888b5dc49d");
 
   
   }
   
+  .polaroid .img1 {
+  position:absolute
+  height:70%;
+  width:100%;
+   border-radius: 10px;
+  content:url("https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FAuntyy%203.jpg?alt=media&token=4b712beb-9d26-4b6d-8937-ea9fdd9166f6");
 
+  
+  }
+  
+  .polaroid:hover .img {
+		content:url("https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FAuntyy%203.jpg?alt=media&token=4b712beb-9d26-4b6d-8937-ea9fdd9166f6");
+		
+    }
+  
+  
+  <!-- .polaroid .img-top {
+        
+        position: absolute;
+		padding:1vh;
+		opacity:0;
+        top: 0;
+        left: 0;
+		
+		width:100%;
+		height:70%;
+		border-radius: 20px;
+        z-index: 99;
+    }
+  
+  
+  
+ -->
 
   .polaroid .p {
   
@@ -470,6 +507,8 @@ text-align:center;
             -ms-transform: translateY(40%);
                 transform: translateY(40%);
   }
+  
+  
   
   
    .button-wrapper {
@@ -1167,7 +1206,9 @@ Http.onreadystatechange = (e) => {
 <div class="welcome">
 
 <div class="polaroid" id="polaroid">
-<img src="https://firebasestorage.googleapis.com/v0/b/srm-guru.appspot.com/o/CV%2FAuntyyy%2FScreenshot_20210414-231449.jpg?alt=media&token=f5fa4322-4ced-4767-b3eb-ea888b5dc49d" id="polaroid1">
+<img class="img" alt="">
+
+
 <p class="p" id="polaroid2">ASHIKA RAMESH
 <br><span>GRAPHIC DESIGNER</span>
 
